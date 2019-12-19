@@ -17,8 +17,13 @@ public class HelloServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
+		String no = request.getParameter("no");
+		String name = request.getParameter("name");
+		
 		PrintWriter pw = response.getWriter();
 		pw.print("<h1>안녕하세요</h1>");
+		pw.print("<h3>" +no + "</h3>");
+		pw.print("<h3>" +name + "</h3>");
 	}
 
 
